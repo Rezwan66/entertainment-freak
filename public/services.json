@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Concerts and Music Festivals",
+    "image": "https://i.ibb.co/4PV75Wm/festival.jpg",
+    "price": 499.99,
+    "short_description": "Experience the magic of live music and entertainment.",
+    "long_description": "Join us for a world of rhythm and melody. Dive into the pulsating energy of live concerts and music festivals. With years of experience in event management, we ensure a seamless and unforgettable experience. We provide top-tier sound and lighting systems, secure venue arrangements, and exceptional artist coordination to make your event shine."
+  },
+  {
+    "id": 2,
+    "name": "Theater and Performing Arts",
+    "image": "https://i.ibb.co/8KZmTVD/theater.jpg",
+    "price": 349.99,
+    "short_description": "Immerse yourself in the world of drama and creativity.",
+    "long_description": "Experience the timeless elegance of theater and performing arts. With a wealth of experience in producing captivating shows, we offer top-notch stage design, talented actors, and intricate costume and set design. Immerse yourself in our world of love, betrayal, and human emotions, all expertly curated for your enjoyment."
+  },
+  {
+    "id": 3,
+    "name": "Film Screenings and Premieres",
+    "image": "https://i.ibb.co/18Nf0p5/film.jpg",
+    "price": 199.99,
+    "short_description": "Step into the world of cinematic storytelling.",
+    "long_description": "Delve into the art of storytelling through film. Our extensive experience in event coordination ensures that your screening or premiere is nothing short of spectacular. We provide top-quality projection and sound, comfortable seating, and themed decor to create a memorable cinematic experience."
+  },
+  {
+    "id": 4,
+    "name": "Comedy Shows",
+    "image": "https://i.ibb.co/x5B355J/comedy-Show.jpg",
+    "price": 259.99,
+    "short_description": "Prepare for an evening of laughter and humor.",
+    "long_description": "Get ready for a night of uncontrollable laughter with our Comedy Shows event. With a proven track record of producing successful comedy events, we offer a laughter-filled atmosphere with seating arrangements that ensure everyone has a great view of the stage. Our talented comedians are prepared to leave you in stitches."
+  },
+  {
+    "id": 5,
+    "name": "Sports Events",
+    "image": "https://i.ibb.co/sycmKK6/sports.jpg",
+    "price": 599.99,
+    "short_description": "Witness the excitement of high-stakes sports action.",
+    "long_description": "Cheer for your favorite team in the heart-pounding world of sports. With our extensive experience in sports event management, we provide secure stadium arrangements, efficient ticketing services, and high-quality broadcasts. Expect nothing less than an electrifying atmosphere and top-class competition."
+  },
+  {
+    "id": 6,
+    "name": "Fashion Shows",
+    "image": "https://i.ibb.co/0YMqwkG/fashion.jpg",
+    "price": 399.99,
+    "short_description": "Step into the world of fashion and style.",
+    "long_description": "Be at the forefront of the fashion world with our Fashion Shows event. With years of experience in fashion event planning, we ensure impeccable runway arrangements, talented models, and breathtaking designs. We offer the highest standards of glamour, style, and beauty in a high-fashion extravaganza."
+  }
+]

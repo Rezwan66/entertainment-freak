@@ -1,0 +1,22 @@
+[
+  {
+    "id": 201,
+    "name": "Taylor Swift",
+    "image": "https://i.ibb.co/fk8qzMG/taylor.jpg"
+  },
+  {
+    "id": 202,
+    "name": "Olivia Rodrigo",
+    "image": "https://i.ibb.co/4m0sFGC/olivia.webp"
+  },
+  {
+    "id": 203,
+    "name": "Louis CK",
+    "image": "https://i.ibb.co/X7SqG86/louis.webp"
+  },
+  {
+    "id": 204,
+    "name": "Coldplay",
+    "image": "https://i.ibb.co/GM2RQWp/coldplay.jpg"
+  }
+]

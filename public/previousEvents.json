@@ -1,0 +1,30 @@
+[
+  {
+    "id": 101,
+    "name": "Rock 'n' Roll Extravaganza",
+    "image": "https://i.ibb.co/crwgpYk/rocknroll.jpg",
+    "short_review": "A mind-blowing experience! The energy was off the charts, and the sound quality was amazing.",
+    "rating": 4.8
+  },
+  {
+    "id": 102,
+    "name": "Shakespearean Showcase - Macbeth",
+    "image": "https://i.ibb.co/kJVMtJ8/shakespear.jpg",
+    "short_review": "A stunning performance! The actors' dedication to their roles truly shone through.",
+    "rating": 4.5
+  },
+  {
+    "id": 103,
+    "name": "Blockbuster Movie Premiere - 'Inception 2'",
+    "image": "https://i.ibb.co/WyJ1fkH/inception.jpg",
+    "short_review": "An unforgettable night! The premiere was nothing short of spectacular.",
+    "rating": 4.7
+  },
+  {
+    "id": 104,
+    "name": "Laugh Riot - Stand-Up Comedy Gala",
+    "image": "https://i.ibb.co/T1gQp76/comedy.jpg",
+    "short_review": "Hilarious from start to finish! The comedians were on fire, and we laughed till it hurt.",
+    "rating": 4.9
+  }
+]
