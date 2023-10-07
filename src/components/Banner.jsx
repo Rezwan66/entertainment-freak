@@ -5,7 +5,7 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full">
           <img
             src="/banner.jpg"
-            className="w-full brightness-50 h-[550px] object-cover"
+            className="w-full opacity-80 brightness-50 h-[550px] object-cover"
           />
           <h2 className="font-bold absolute top-[10%] left-[10%] text-white btn btn-outline">
             Book us today
@@ -32,7 +32,7 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <img
             src="/bannerStadium.png"
-            className="w-full brightness-50 h-[550px] object-fill"
+            className="w-full opacity-80 brightness-50 h-[550px] object-fill"
           />
           <h2 className="text-3xl lg:text-6xl text-white absolute top-[30%] left-[10%]">
             Or the craziest <span className="text-amber-300">sports</span>{' '}
@@ -56,7 +56,7 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <img
             src="/bannerTheatre.jpg"
-            className="w-full brightness-50 h-[550px] object-fill"
+            className="w-full opacity-80 brightness-50 h-[550px] object-fill"
           />
           <h2 className="text-3xl lg:text-6xl text-white absolute top-[30%] left-[10%]">
             Or even silent <span className="text-amber-300">theatre</span>{' '}

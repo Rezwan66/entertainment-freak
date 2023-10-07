@@ -49,7 +49,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="max-w-[1440px] mx-auto py-4">
+    <div className="max-w-7xl mx-auto py-4">
       <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown">
