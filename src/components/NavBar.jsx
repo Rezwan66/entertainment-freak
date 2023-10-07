@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const NavBar = () => {
+  const { user, logoutUser } = useContext(AuthContext);
   const navLinks = (
     <>
       <li>
@@ -48,8 +52,16 @@ const NavBar = () => {
     </>
   );
 
+  const handleLogout = () => {
+    logoutUser()
+      .then(() => {
+        toast.success('Logged out successfully!');
+      })
+      .catch(error => toast.error(error.message));
+  };
+
   return (
-    <div className="max-w-7xl mx-auto py-4">
+    <div className="max-w-[1440px] mx-auto py-4">
       <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown">
@@ -89,9 +101,27 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login" className="btn btn-warning capitalize">
-            Login
-          </Link>
+          {user ? (
+            <div className="flex flex-col md:flex-row items-center gap-2">
+              <div className="avatar hidden md:block">
+                <div className="w-10 h-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </div>
+              <p className="text-white">{user?.displayName}</p>
+
+              <button
+                onClick={handleLogout}
+                className="btn btn-warning capitalize"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <Link to="/login" className="btn btn-warning capitalize">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

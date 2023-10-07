@@ -1,9 +1,53 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useContext } from 'react';
+import { AuthContext } from '../providers/AuthProvider';
+import toast from 'react-hot-toast';
 AOS.init();
 
 const Register = () => {
+  const { createUser, updateUser, googleLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleRegister = e => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    // password validation
+    if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,}$/.test(password)) {
+      return toast.error(
+        'Password must be at least 6 characters long and include at least one capital letter and one special character'
+      );
+    }
+    createUser(email, password)
+      .then(() => {
+        toast.success('Created user successfully!');
+        updateUser(name, photo)
+          .then(() => {
+            toast.success('Updated profile successfully!');
+            toast('Redirecting to Home!', {
+              icon: '➡',
+            });
+          })
+          .catch(error => toast.error(error.message));
+
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch(error => toast.error(error.message));
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        toast.success('Successfully signed in using Google');
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch(error => toast.error(error.message));
+  };
+
   return (
     <div data-aos="zoom-in">
       <div className="hero bg-transparent mb-28">
@@ -12,7 +56,7 @@ const Register = () => {
             <h1 className="text-4xl font-bold text-center text-white">
               Register now!
             </h1>
-            <form className="card-body">
+            <form onSubmit={handleRegister} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text text-white">Full Name</span>
@@ -85,7 +129,10 @@ const Register = () => {
                 <div className="border h-[1px] w-full"></div>
               </div>
               <div className="relative">
-                <button className="btn btn-info btn-outline bg-base-200 w-full text-base capitalize">
+                <button
+                  onClick={handleGoogleLogin}
+                  className="btn btn-info btn-outline bg-base-200 w-full text-base capitalize"
+                >
                   Continue with Google
                 </button>
                 <img
