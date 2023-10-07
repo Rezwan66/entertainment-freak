@@ -8,6 +8,7 @@ const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
   //   console.log(location.pathname);
+  //   console.log(user, loading);
   if (loading) {
     return (
       <div className="text-center">

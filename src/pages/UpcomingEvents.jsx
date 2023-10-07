@@ -1,7 +1,7 @@
 const UpcomingEvents = () => {
   return (
     <div>
-      <h2>All our upcoming events</h2>
+      <h2>upcoming</h2>
     </div>
   );
 };
