@@ -8,7 +8,7 @@ const PrevEvents = () => {
       .then(res => res.json())
       .then(data => setEvents(data));
   }, []);
-  console.log(events);
+  //   console.log(events);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 lg:px-0">
       {events?.map(event => (

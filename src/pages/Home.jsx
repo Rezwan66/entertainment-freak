@@ -2,6 +2,8 @@ import { useLoaderData } from 'react-router-dom';
 import Banner from '../components/Banner';
 import ServiceCard from '../components/ServiceCard';
 import PrevEvents from '../components/PrevEvents';
+import Artists from '../components/Artists';
+import ContactUs from '../components/ContactUs';
 
 const Home = () => {
   const services = useLoaderData();
@@ -28,6 +30,17 @@ const Home = () => {
             Our Previous Events
           </h2>
           <PrevEvents></PrevEvents>
+        </div>
+        {/* artists we worked with */}
+        <div>
+          <h2 className="text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
+            Artists We Worked With
+          </h2>
+          <Artists></Artists>
+        </div>
+        {/* Contact us today */}
+        <div className="mt-16 mb-10">
+          <ContactUs></ContactUs>
         </div>
       </div>
     </div>
