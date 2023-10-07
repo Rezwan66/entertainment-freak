@@ -34,7 +34,7 @@ const Register = () => {
           })
           .catch(error => toast.error(error.message));
 
-        navigate(location?.state ? location.state : '/');
+        navigate('/');
       })
       .catch(error => toast.error(error.message));
   };
@@ -43,6 +43,7 @@ const Register = () => {
     googleLogin()
       .then(() => {
         toast.success('Successfully signed in using Google');
+
         navigate(location?.state ? location.state : '/');
       })
       .catch(error => toast.error(error.message));
