@@ -8,9 +8,8 @@ const MainLayout = () => {
       style={{ backgroundImage: 'url(/bgImage.png)' }}
     >
       <NavBar></NavBar>
-      <div className="max-w-[1440px] mx-auto">
-        <Outlet></Outlet>
-      </div>
+
+      <Outlet></Outlet>
     </div>
   );
 };

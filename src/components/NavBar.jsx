@@ -7,7 +7,11 @@ const NavBar = () => {
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
-            isPending ? 'pending' : isActive ? 'bg-amber-400 text-black' : ''
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              : ''
           }
         >
           Home
@@ -17,7 +21,11 @@ const NavBar = () => {
         <NavLink
           to="/upcoming"
           className={({ isActive, isPending }) =>
-            isPending ? 'pending' : isActive ? 'bg-amber-400 text-black' : ''
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              : ''
           }
         >
           Upcoming Events
@@ -27,7 +35,11 @@ const NavBar = () => {
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
-            isPending ? 'pending' : isActive ? 'bg-amber-400 text-black' : ''
+            isPending
+              ? 'pending'
+              : isActive
+              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              : ''
           }
         >
           About Us
@@ -37,7 +49,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="lg:px-10 py-4">
+    <div className="max-w-[1440px] mx-auto py-4">
       <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown">
@@ -68,11 +80,13 @@ const NavBar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost btn-outline normal-case text-xl text-amber-300">
-            <i>Entertainment Freak</i>
+            <i>EntertainmentFreak</i>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-white">{navLinks}</ul>
+          <ul className="flex flex-wrap items-center gap-8 text-sm menu-horizontal px-1 text-white">
+            {navLinks}
+          </ul>
         </div>
         <div className="navbar-end">
           <a className="btn btn-warning capitalize">Login</a>

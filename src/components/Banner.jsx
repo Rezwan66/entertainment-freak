@@ -4,8 +4,8 @@ const Banner = () => {
       <div className="carousel rounded-sm w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <img
-            src="/banner.png"
-            className="w-full brightness-50 h-[550px] object-fill"
+            src="/banner.jpg"
+            className="w-full brightness-50 h-[550px] object-cover"
           />
           <h2 className="font-bold absolute top-[10%] left-[10%] text-white btn btn-outline">
             Book us today
