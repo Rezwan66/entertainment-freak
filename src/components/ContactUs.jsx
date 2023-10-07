@@ -3,13 +3,13 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 const ContactUs = () => {
   return (
     <div>
-      <div className="hero bg-purple-200 bg-opacity-20 text-white rounded-lg">
+      <div className="hero bg-purple-200 py-6 bg-opacity-20 text-white rounded-lg">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="/logo.png"
             className="max-w-sm h-full rounded-lg shadow-2xl"
           />
-          <div>
+          <div className="md:text-center lg:text-left px-2">
             <h1 className="text-4xl font-bold">Contact Us Today</h1>
             <div className="py-4">
               <p className="mb-4">

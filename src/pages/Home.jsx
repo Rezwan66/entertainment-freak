@@ -4,6 +4,7 @@ import ServiceCard from '../components/ServiceCard';
 import PrevEvents from '../components/PrevEvents';
 import Artists from '../components/Artists';
 import ContactUs from '../components/ContactUs';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const services = useLoaderData();
@@ -39,10 +40,12 @@ const Home = () => {
           <Artists></Artists>
         </div>
         {/* Contact us today */}
-        <div className="mt-16 mb-10">
+        <div className="my-24">
           <ContactUs></ContactUs>
         </div>
       </div>
+      {/* footer */}
+      <Footer></Footer>
     </div>
   );
 };
