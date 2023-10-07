@@ -4,11 +4,10 @@ import ServiceCard from '../components/ServiceCard';
 import PrevEvents from '../components/PrevEvents';
 import Artists from '../components/Artists';
 import ContactUs from '../components/ContactUs';
-import Footer from '../components/Footer';
 
 const Home = () => {
   const services = useLoaderData();
-  console.log(services);
+  // console.log(services);
   return (
     <div>
       {/* slider */}
@@ -44,8 +43,6 @@ const Home = () => {
           <ContactUs></ContactUs>
         </div>
       </div>
-      {/* footer */}
-      <Footer></Footer>
     </div>
   );
 };

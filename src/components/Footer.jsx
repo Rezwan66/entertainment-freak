@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-fuchsia-950">
       {/* <footer className="footer p-10 bg-fuchsia-950 text-neutral-content">
         <aside>
           <a className="btn btn-ghost btn-outline normal-case text-xl text-amber-300">
@@ -52,7 +52,7 @@ const Footer = () => {
         </nav>
       </footer> */}
 
-      <footer className="footer items-center bg-fuchsia-950 p-12 text-neutral-content">
+      <footer className="footer items-center max-w-7xl mx-auto py-12 px-6 lg:px-0 text-neutral-content">
         <aside>
           <a className="btn btn-ghost btn-outline normal-case text-xl text-amber-300">
             <i>EntertainmentFreak</i>
