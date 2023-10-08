@@ -11,7 +11,7 @@ const PrivateRoute = ({ children }) => {
   //   console.log(user, loading);
   if (loading) {
     return (
-      <div className="text-center">
+      <div className="text-center mt-20">
         <CircleLoader size={50} color="#36d7b7" />
         <CircleLoader size={50} color="#FBBF24" />
         <CircleLoader size={50} color="#FF0000" />
