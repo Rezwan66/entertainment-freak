@@ -14,7 +14,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              ? 'bg-amber-400 text-black text-base px-4 py-2 rounded-lg'
               : ''
           }
         >
@@ -28,7 +28,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              ? 'bg-amber-400 text-black text-base px-4 py-2 rounded-lg'
               : ''
           }
         >
@@ -42,7 +42,7 @@ const NavBar = () => {
             isPending
               ? 'pending'
               : isActive
-              ? 'bg-amber-400 text-black px-4 py-2 rounded-lg'
+              ? 'bg-amber-400 text-black text-base px-4 py-2 rounded-lg'
               : ''
           }
         >
@@ -110,15 +110,12 @@ const NavBar = () => {
               </div>
               <p className="text-white">{user?.displayName}</p>
 
-              <button
-                onClick={handleLogout}
-                className="btn btn-warning capitalize"
-              >
+              <button onClick={handleLogout} className="btn btn-warning">
                 Logout
               </button>
             </div>
           ) : (
-            <Link to="/login" className="btn btn-warning capitalize">
+            <Link to="/login" className="btn btn-warning">
               Login
             </Link>
           )}
