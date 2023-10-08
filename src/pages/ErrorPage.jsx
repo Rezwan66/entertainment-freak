@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 const ErrorPage = () => {
   return (
     <div>
-      <main className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238] space-y-4">
+      <main
+        className="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238] space-y-4"
+        style={{ backgroundImage: 'url(/bgImage.png)' }}
+      >
         <h1 className="text-5xl font-extrabold text-white tracking-widest">
           Oops!😢
         </h1>
