@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const UpcomingEvents = () => {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="bg-transparent text-white py-8">
         <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
           <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 px-8">
@@ -21,7 +21,7 @@ const UpcomingEvents = () => {
               Explore our upcoming events or contact us to book your own event!
             </p>
             <Link to="/">
-              <button className="btn bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent">
+              <button className="btn bg-transparent mr-auto hover:bg-yellow-400 text-yellow-300 hover:text-black rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-400 hover:border-transparent">
                 Explore Now
               </button>
             </Link>

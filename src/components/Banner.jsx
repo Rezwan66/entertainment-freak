@@ -7,7 +7,7 @@ const Banner = () => {
             src="/banner.jpg"
             className="w-full opacity-80 brightness-50 h-[550px] object-cover"
           />
-          <h2 className="font-bold absolute top-[10%] left-[10%] text-white btn btn-outline">
+          <h2 className="font-bold absolute top-[80%] right-[5%] text-white btn btn-outline">
             Book us today
           </h2>
           <h2 className="text-3xl lg:text-6xl text-white absolute lg:w-[850px] top-[30%] left-[10%]">
@@ -34,6 +34,9 @@ const Banner = () => {
             src="/bannerStadium.png"
             className="w-full opacity-80 brightness-50 h-[550px] object-fill"
           />
+          <h2 className="font-bold absolute top-[80%] right-[5%] text-white btn btn-outline">
+            Book us today
+          </h2>
           <h2 className="text-3xl lg:text-6xl text-white absolute top-[30%] left-[10%]">
             Or the craziest <span className="text-amber-300">sports</span>{' '}
             events
@@ -58,6 +61,9 @@ const Banner = () => {
             src="/bannerTheatre.jpg"
             className="w-full opacity-80 brightness-50 h-[550px] object-fill"
           />
+          <h2 className="font-bold absolute top-[80%] right-[5%] text-white btn btn-outline">
+            Book us today
+          </h2>
           <h2 className="text-3xl lg:text-6xl text-white absolute top-[30%] left-[10%]">
             Or even silent <span className="text-amber-300">theatre</span>{' '}
             events

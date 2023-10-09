@@ -15,15 +15,15 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+##### Explanation:
+
+<i>The variable `greeting` is declared here, but not assigned any value. Whereas, `greetign` is never defined since it is a typo, which occurred while trying to assign a value of empty string to the variable 'greeting'. So when we will try to access 'greetign' using console.log, there will be a ReferenceError. Because in JavaScript, ReferenceError represents an error which occurs when we try to access a variable that doesn't exist or is not defined.</i>
 
 </p>
-</details>
 
 ###### 2. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -32,7 +32,7 @@ function sum(a, b) {
   return a + b;
 }
 
-sum(1, "2");
+sum(1, '2');
 ```
 
 - A: `NaN`
@@ -40,23 +40,23 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+##### Explanation:
+
+<i>The function above takes two arguments a and b and then returns their sum. When we pass 1 and "2" as the two parameters, JavaScript performs string concatenation, converting the parameter 1 to string and then adding it to "2". Hence, we see that the result is "12" which is a string that is the result of this string concatenation.</i>
 
 </p>
-</details>
 
 ###### 3. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
 ```javascript
-const food = ["🍕", "🍫", "🥑", "🍔"];
+const food = ['🍕', '🍫', '🥑', '🍔'];
 const info = { favoriteFood: food[0] };
 
-info.favoriteFood = "🍝";
+info.favoriteFood = '🍝';
 
 console.log(food);
 ```
@@ -66,15 +66,15 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: A
 
-<i>Write your explanation here</i>
+##### Explanation:
+
+<i>Here, when we initially assigned `const info = { favoriteFood: food[0] };` it makes a copy of the string value '🍕' from the food array to the info object as a property. There is no reference of the food array here after assigning since the string is a copy. Hence, when we later set `info.favoriteFood = '🍝';` it updates only the key-value of the info.favoriteFood and the food array remains unaffected. </i>
 
 </p>
-</details>
 
 ###### 4. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -91,15 +91,15 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: B
 
-<i>Write your explanation here</i>
+##### Explanation:
+
+<i>The JS function `sayHi` takes name as a parameter and returns the string `Hi there, ${name}`. So, when we call the function like this `sayHi()` without passing it any parameter, the name argument defaults to `undefined` since it is not passed or defined. So we will get the return string `Hi there, undefined`</i>
 
 </p>
-</details>
 
 ###### 5. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -107,7 +107,7 @@ console.log(sayHi());
 let count = 0;
 const nums = [0, 1, 2, 3];
 
-nums.forEach((num) => {
+nums.forEach(num => {
   if (num) count += 1;
 });
 
@@ -119,12 +119,12 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: ?
+#### Answer: C
 
-<i>Write your explanation here</i>
+##### Explanation:
+
+<i>Here, the `forEach` method is checking each element of the `nums` array for truthy values, and then incrementing the `count` variable by 1 if the element is truthy. The nums array has 4 elements in total, but the first element (0) is falsy in JavaScript, so the count is not incremented for the first element. But for the other three elements (1,2,3) the count is incremented once for each element, which results in `count=3`.</i>
 
 </p>
-</details>

@@ -61,7 +61,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto py-4">
+    <div className="max-w-7xl mx-auto py-4">
       <div className="navbar bg-transparent">
         <div className="navbar-start">
           <div className="dropdown">
@@ -91,7 +91,7 @@ const NavBar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost btn-outline normal-case text-xl text-amber-300">
+          <a className="btn btn-warning btn-outline normal-case text-xl text-amber-300">
             <i>EntertainmentFreak</i>
           </a>
         </div>

@@ -54,7 +54,7 @@ const Footer = () => {
 
       <footer className="footer items-center max-w-7xl mx-auto py-12 px-6 lg:px-0 text-neutral-content">
         <aside>
-          <a className="btn btn-ghost btn-outline normal-case text-xl text-amber-300">
+          <a className="btn btn-warning btn-outline normal-case text-xl text-amber-300">
             <i>EntertainmentFreak</i>
           </a>
           <p>
