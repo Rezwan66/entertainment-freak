@@ -19,4 +19,6 @@ A simple entertainment events management website, built using React, Firebase SD
 
 ### Live Links
 
+[Firebase Deploy](https://entertainment-freak.web.app/) - https://entertainment-freak.web.app/
+
 **N.B.:** Please find my answers to the MCQ TEST included inside the `questions_and_answers.md` file.
