@@ -20,3 +20,5 @@ A simple entertainment events management website, built using React, Firebase SD
 ### Live Links
 
 [Firebase Deploy](https://entertainment-freak.web.app/) - https://entertainment-freak.web.app/
+
+[Netlify](https://playful-lamington-248ae1.netlify.app/)
