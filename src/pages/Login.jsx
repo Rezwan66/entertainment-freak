@@ -42,8 +42,8 @@ const Login = () => {
     <div data-aos="zoom-in">
       <div className="hero bg-transparent mt-10 mb-28">
         <div className="hero-content">
-          <div className="card w-[375px] shadow-2xl bg-base-100 bg-opacity-20 py-6">
-            <h1 className="text-4xl font-bold text-center text-white">
+          <div className="card md:w-[375px] w-[280px] shadow-2xl bg-base-100 bg-opacity-20 py-6">
+            <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
               Login now!
             </h1>
             <form onSubmit={handleLogin} className="card-body">
@@ -99,10 +99,10 @@ const Login = () => {
                   onClick={handleGoogleLogin}
                   className="btn btn-info btn-outline bg-base-200 w-full text-base capitalize"
                 >
-                  Continue with Google
+                  <span className="hidden md:block">Continue with</span> Google
                 </button>
                 <img
-                  className="w-8 top-2 left-4 absolute"
+                  className="w-6 top-3 md:w-8 md:top-2 left-4 absolute"
                   src="/google.png"
                   alt=""
                 />
