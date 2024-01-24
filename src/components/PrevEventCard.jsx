@@ -23,7 +23,7 @@ const PrevEventCard = ({ event }) => {
         </div>
       </div> */}
       {/* material */}
-      <div className="relative flex h-60 flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex h-60 flex-row pr-8 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
           <img src={image} alt="image" className="h-full w-full object-cover" />
         </div>
@@ -38,7 +38,7 @@ const PrevEventCard = ({ event }) => {
               <FaQuoteRight></FaQuoteRight>
             </i>
           </h4>
-          <div className="flex justify-end items-center gap-2">
+          <div className="flex justify-end items-center gap-2 overflow-x-scroll">
             {/* <Rating name="read-only" value={rating} readOnly /> */}
             <Rating
               name="half-rating-read"
@@ -47,7 +47,7 @@ const PrevEventCard = ({ event }) => {
               readOnly
             />
             <Typography className="" component="legend">
-              <i className="text-xl text-green-800">{rating}</i>
+              <i className=" text-xl text-green-800">{rating}</i>
             </Typography>
           </div>
         </div>

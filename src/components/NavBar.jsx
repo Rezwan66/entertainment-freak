@@ -5,6 +5,13 @@ import toast from 'react-hot-toast';
 
 const NavBar = () => {
   const { user, logoutUser } = useContext(AuthContext);
+  const handleLogout = () => {
+    logoutUser()
+      .then(() => {
+        toast.success('Logged out successfully!');
+      })
+      .catch(error => toast.error(error.message));
+  };
   const navLinks = (
     <>
       <li>
@@ -49,16 +56,19 @@ const NavBar = () => {
           About Us
         </NavLink>
       </li>
+      <li>
+        {user ? (
+          <button onClick={handleLogout} className=" block md:hidden">
+            Logout
+          </button>
+        ) : (
+          <Link to="/login" className=" block md:hidden">
+            Login
+          </Link>
+        )}
+      </li>
     </>
   );
-
-  const handleLogout = () => {
-    logoutUser()
-      .then(() => {
-        toast.success('Logged out successfully!');
-      })
-      .catch(error => toast.error(error.message));
-  };
 
   return (
     <div className="max-w-7xl mx-auto py-4">
@@ -91,9 +101,12 @@ const NavBar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-warning btn-outline normal-case text-xl text-amber-300">
+          <Link
+            to="/"
+            className="btn btn-warning btn-outline normal-case text-xl text-amber-300"
+          >
             <i>EntertainmentFreak</i>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="flex flex-wrap items-center gap-8 text-sm menu-horizontal px-1 text-white">
@@ -108,14 +121,17 @@ const NavBar = () => {
                   <img src={user?.photoURL} />
                 </div>
               </div>
-              <p className="text-white">{user?.displayName}</p>
+              <p className="text-white hidden md:block">{user?.displayName}</p>
 
-              <button onClick={handleLogout} className="btn btn-warning">
+              <button
+                onClick={handleLogout}
+                className="btn btn-warning hidden md:block"
+              >
                 Logout
               </button>
             </div>
           ) : (
-            <Link to="/login" className="btn btn-warning">
+            <Link to="/login" className="btn btn-warning hidden md:block">
               Login
             </Link>
           )}

@@ -7,10 +7,10 @@ const ContactUs = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="/logo.png"
-            className="max-w-sm h-full rounded-lg shadow-2xl"
+            className="max-w-[280px] h-full rounded-lg shadow-2xl"
           />
           <div className="md:text-center lg:text-left px-2">
-            <h1 className="text-4xl font-bold">Contact Us Today</h1>
+            <h1 className="text-2xl md:text-4xl font-bold">Contact Us Today</h1>
             <div className="py-4">
               <p className="mb-4">
                 We are here to make your events unforgettable. <br />

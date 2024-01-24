@@ -15,7 +15,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto">
         {/* Our Services section */}
         <div>
-          <h2 className="text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
+          <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 lg:px-0">
@@ -26,14 +26,14 @@ const Home = () => {
         </div>
         {/* our previous shows */}
         <div>
-          <h2 className="text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
+          <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Our Previous Events
           </h2>
           <PrevEvents></PrevEvents>
         </div>
         {/* artists we worked with */}
         <div>
-          <h2 className="text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
+          <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Artists We Worked With
           </h2>
           <Artists></Artists>
