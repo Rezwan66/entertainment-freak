@@ -23,7 +23,7 @@ const PrevEventCard = ({ event }) => {
         </div>
       </div> */}
       {/* material */}
-      <div className="relative flex h-60 flex-row pr-8 rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+      <div className="relative flex h-64 flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
           <img src={image} alt="image" className="h-full w-full object-cover" />
         </div>
@@ -31,14 +31,15 @@ const PrevEventCard = ({ event }) => {
           <h6 className="mb-4 block font-sans text-xs md:text-sm font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
             {name}
           </h6>
-          <h4 className="mb-2 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+
+          <h4 className="flex-grow mb-2 block font-sans text-sm md:text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
             <i>
               <FaQuoteLeft></FaQuoteLeft>
               {short_review}
               <FaQuoteRight></FaQuoteRight>
             </i>
           </h4>
-          <div className="flex justify-end items-center gap-2 overflow-x-scroll">
+          <div className="absolute right-4 bottom-2 flex justify-end items-center gap-2">
             {/* <Rating name="read-only" value={rating} readOnly /> */}
             <Rating
               name="half-rating-read"

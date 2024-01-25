@@ -3,7 +3,7 @@ const About = () => {
     <div className="max-w-7xl mx-auto mt-10">
       {/* stat */}
       <div className="px-6 mt-6 flex justify-end">
-        <div className="stats shadow rounded-md bg-transparent">
+        <div className="stats shadow-2xl rounded-md bg-transparent">
           <div className="stat">
             <div className="stat-figure text-amber-400">
               <svg

@@ -1,4 +1,5 @@
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import ScrollButton from './ScrollButton';
 
 const ContactUs = () => {
   return (
@@ -35,7 +36,12 @@ const ContactUs = () => {
                 <FaQuoteRight></FaQuoteRight>
               </i>
             </h4>
-            <button className="btn btn-warning">Book Now</button>
+            {/* <button className="btn btn-warning">Book Now</button> */}
+            <ScrollButton
+              target="our-services"
+              text="Book Now"
+              classes={'btn btn-warning'}
+            />
           </div>
         </div>
       </div>

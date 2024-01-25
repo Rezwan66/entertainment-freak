@@ -4,9 +4,15 @@ import ServiceCard from '../components/ServiceCard';
 import PrevEvents from '../components/PrevEvents';
 import Artists from '../components/Artists';
 import ContactUs from '../components/ContactUs';
+import { Element } from 'react-scroll';
+import { useEffect } from 'react';
 
 const Home = () => {
   const services = useLoaderData();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // console.log(services);
   return (
     <div>
@@ -14,7 +20,7 @@ const Home = () => {
       <Banner></Banner>
       <div className="max-w-7xl mx-auto">
         {/* Our Services section */}
-        <div>
+        <Element name="our-services">
           <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Our Services
           </h2>
@@ -23,7 +29,7 @@ const Home = () => {
               <ServiceCard key={service.id} service={service}></ServiceCard>
             ))}
           </div>
-        </div>
+        </Element>
         {/* our previous shows */}
         <div>
           <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">

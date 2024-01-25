@@ -125,13 +125,16 @@ const NavBar = () => {
 
               <button
                 onClick={handleLogout}
-                className="btn btn-warning hidden md:block"
+                className="btn btn-warning btn-sm hidden md:block"
               >
                 Logout
               </button>
             </div>
           ) : (
-            <Link to="/login" className="btn btn-warning hidden md:block">
+            <Link
+              to="/login"
+              className="btn btn-warning btn-sm py-2 hidden md:block"
+            >
               Login
             </Link>
           )}

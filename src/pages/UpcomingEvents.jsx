@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+// import ScrollButton from '../components/ScrollButton';
 
 const UpcomingEvents = () => {
   return (
@@ -25,6 +26,13 @@ const UpcomingEvents = () => {
                 Explore Now
               </button>
             </Link>
+            {/* <ScrollButton
+              target="/our-services"
+              text="Book Today"
+              classes={
+                'font-bold absolute top-[80%] right-[5%] text-white btn btn-outline'
+              }
+            /> */}
           </div>
           <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
             <div className="container mx-auto w-full h-full">

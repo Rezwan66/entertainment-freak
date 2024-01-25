@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
@@ -75,9 +76,12 @@ const ServiceDetails = () => {
           <h1 className="text-4xl font-bold">{name}</h1>
           <h3 className="text-xl">{long_description}</h3>
           <br />
-          <a className="btn btn-warning w-full capitalize text-lg">
+          <button
+            onClick={() => toast.success('Booked Successfully!')}
+            className="btn btn-warning w-full capitalize text-lg"
+          >
             Book now for only: ${price}
-          </a>
+          </button>
         </div>
       </div>
     </div>
