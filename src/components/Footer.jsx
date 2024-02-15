@@ -54,7 +54,7 @@ const Footer = () => {
         </nav>
       </footer> */}
 
-      <footer className="footer items-center max-w-7xl mx-auto py-12 px-6 lg:px-0 text-neutral-content">
+      <footer className="footer items-center  mx-auto py-12 px-6  text-neutral-content">
         <aside>
           <Link
             to="/"
