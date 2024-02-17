@@ -7,7 +7,7 @@ const ServiceDetails = () => {
   const idInt = parseFloat(id);
   //   console.log(services, idInt);
   const selected = services.find(service => service.id === idInt);
-  console.log(selected);
+  // console.log(selected);
   const { image, long_description, name, price } = selected;
   return (
     <div className="max-w-4xl mt-20 mb-28 mx-auto px-4 lg:px-0">

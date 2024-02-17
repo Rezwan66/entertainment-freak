@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 import ArtistCard from './ArtistCard';
 
 const Artists = () => {
   const [artists, setArtists] = useState([]);
-  useEffect(() => {
-    fetch('/artists.json')
-      .then(res => res.json())
-      .then(data => setArtists(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch('/artists.json')
+  //     .then(res => res.json())
+  //     .then(data => setArtists(data));
+  // }, []);
+  const axiosPublic = useAxiosPublic();
+  axiosPublic('/artists').then(res => setArtists(res.data));
 
   // console.log(artists);
 
