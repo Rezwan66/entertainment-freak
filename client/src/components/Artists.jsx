@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useAxiosPublic from '../hooks/useAxiosPublic';
 import ArtistCard from './ArtistCard';
+import SpinnerSmall from './SpinnerSmall';
 
 const Artists = () => {
   const [artists, setArtists] = useState([]);
-  // useEffect(() => {
-  //   fetch('/artists.json')
-  //     .then(res => res.json())
-  //     .then(data => setArtists(data));
-  // }, []);
+  const [loading, setLoading] = useState(true);
   const axiosPublic = useAxiosPublic();
-  axiosPublic('/artists').then(res => setArtists(res.data));
+  useEffect(() => {
+    // fetch('/artists.json')
+    //   .then(res => res.json())
+    //   .then(data => setArtists(data));
+    axiosPublic('/artists').then(res => {
+      setArtists(res.data);
+      setLoading(false);
+    });
+  }, [axiosPublic]);
+
+  if (loading) {
+    return <SpinnerSmall />;
+  }
 
   // console.log(artists);
 
