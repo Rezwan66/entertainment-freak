@@ -117,7 +117,7 @@ const NavBar = () => {
           {user ? (
             <div className="flex flex-col md:flex-row items-center gap-2">
               <div className="avatar hidden md:block">
-                <div className="w-10 h-10 rounded-full">
+                <div className="w-8 h-8 rounded-full">
                   <img src={user?.photoURL} />
                 </div>
               </div>
