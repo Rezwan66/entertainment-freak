@@ -1,5 +1,3 @@
-// We are creating an AxiosSecure instance here to use on all api operations
-
 import axios from "axios";
 
 const axiosSecure = axios.create({
@@ -7,4 +5,7 @@ const axiosSecure = axios.create({
     withCredentials: true
 });
 
-export default axiosSecure;
+const useAxiosSecure = () => {
+    return axiosSecure;
+};
+export default useAxiosSecure;
