@@ -38,6 +38,7 @@ async function run() {
         // collections
         const artistsCollection = client.db('entertainmentDB').collection('artists');
         const previousEventsCollection = client.db('entertainmentDB').collection('previousEvents');
+        const categoriesCollection = client.db('entertainmentDB').collection('categories');
 
         app.get('/artists', async (req, res) => {
             const result = await artistsCollection.find().toArray();
@@ -45,6 +46,10 @@ async function run() {
         });
         app.get('/previousEvents', async (req, res) => {
             const result = await previousEventsCollection.find().toArray();
+            res.send(result);
+        });
+        app.get('/categories', async (req, res) => {
+            const result = await categoriesCollection.find().toArray();
             res.send(result);
         });
     } finally {
