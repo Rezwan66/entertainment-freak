@@ -21,13 +21,14 @@ const Router = createBrowserRouter([
         // loader: () => fetch('/services.json'),
       },
       {
-        path: '/service/:id',
+        path: '/category/:id',
         element: (
           <PrivateRoute>
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
         ),
-        // loader: (params) => fetch('/services.json'),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
       },
       {
         path: '/upcoming',

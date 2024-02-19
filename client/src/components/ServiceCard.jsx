@@ -19,7 +19,7 @@ const ServiceCard = ({ service }) => {
             <b>Book now:</b> ${price}
           </i>
           <div className="card-actions justify-center">
-            <Link to={`/service/${id}`} className="w-full">
+            <Link to={`/category/${id}`} className="w-full">
               <button className="btn btn-warning w-full capitalize">
                 Learn More!
               </button>
