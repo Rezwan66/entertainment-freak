@@ -52,6 +52,12 @@ async function run() {
             const result = await categoriesCollection.find().toArray();
             res.send(result);
         });
+        app.get('/categories/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { id: parseInt(id) };
+            const result = await categoriesCollection.findOne(query);
+            res.send(result);
+        });
     } finally {
         // Ensures that the client will close when you finish/error
         // await client.close();

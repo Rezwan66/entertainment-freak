@@ -2,13 +2,13 @@ import toast from 'react-hot-toast';
 import { useLoaderData, useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
-  const services = useLoaderData();
+  // const services = useLoaderData();
   const { id } = useParams();
   const idInt = parseFloat(id);
   //   console.log(services, idInt);
-  const selected = services.find(service => service.id === idInt);
+  // const selected = services.find(service => service.id === idInt);
   // console.log(selected);
-  const { image, long_description, name, price } = selected;
+  const { image, long_description, name, price } = selected || {};
   return (
     <div className="max-w-4xl mt-20 mb-28 mx-auto px-4 lg:px-0">
       {/* <div className=" rounded overflow-hidden border w-full lg:w-6/12 md:w-6/12 bg-white mx-3 md:mx-0 lg:mx-0">

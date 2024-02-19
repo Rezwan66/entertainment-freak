@@ -18,7 +18,7 @@ const Router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('/services.json'),
+        // loader: () => fetch('/services.json'),
       },
       {
         path: '/service/:id',
@@ -27,7 +27,7 @@ const Router = createBrowserRouter([
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch('/services.json'),
+        // loader: (params) => fetch('/services.json'),
       },
       {
         path: '/upcoming',
