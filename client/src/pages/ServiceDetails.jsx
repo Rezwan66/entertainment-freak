@@ -6,6 +6,7 @@ const ServiceDetails = () => {
   const { id } = useParams();
   const idInt = parseFloat(id);
   console.log(idInt);
+  // IMPLEMENT AND LOAD EVENTS UNDER THIS CATEGORY HERE
   // console.log(typeof id, idInt, category);
   // const selected = services.find(service => service.id === idInt);
   // console.log(selected);
