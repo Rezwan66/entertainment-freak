@@ -13,10 +13,10 @@ const ServiceDetails = () => {
 
   const { image, long_description, name, price } = category || {};
   return (
-    <div className="max-w-4xl mt-20 mb-28 mx-auto px-4 lg:px-0">
+    <div className="max-w-7xl mt-20 mb-28 mx-auto px-4 lg:px-0">
       {/* my card */}
-      <div className="flex flex-col md:flex-row max-w-4xl bg-base-200 bg-opacity-40 rounded-xl gap-4 p-6 md:p-0">
-        <img className="md:w-1/2 md:rounded-l-xl" src={image} alt="" />
+      <div className=" bg-base-200 bg-opacity-40 rounded-xl gap-4 p-6 md:p-0">
+        <img className="md:w-full h-20 md:rounded-l-xl" src={image} alt="" />
         <div className="text-white md:p-6 space-y-4">
           <h1 className="text-4xl font-bold">{name}</h1>
           <h3 className="text-xl">{long_description}</h3>
