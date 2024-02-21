@@ -15,7 +15,7 @@ const ServiceDetails = () => {
   const { image, long_description, name, price } = category || {};
   return (
     <div>
-      <DynamicBanner />
+      <DynamicBanner category={category} />
       <div className="max-w-7xl mt-20 mb-28 mx-auto px-4 lg:px-0">
         {/* my card */}
         <div className=" bg-base-200 bg-opacity-40 rounded-xl gap-4 p-6 md:p-0">
