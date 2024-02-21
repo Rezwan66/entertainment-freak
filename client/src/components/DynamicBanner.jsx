@@ -6,8 +6,10 @@ export const DynamicBanner = ({ category }) => {
   const sliders = [
     {
       img: 'https://source.unsplash.com/1200x640/?nature',
-      title: 'Escape 1',
-      des: 'A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.',
+      //   title: 'Escape 1',
+      title: name,
+      //   des: 'A Symphony of Tranquility. Experience the perfect blend of relaxation and excitement.',
+      des: long_description,
     },
     {
       img: 'https://source.unsplash.com/1200x640/?hill',
