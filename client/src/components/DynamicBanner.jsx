@@ -2,7 +2,8 @@ import { useState } from 'react';
 
 export const DynamicBanner = ({ category }) => {
   const [currentSlider, setCurrentSlider] = useState(0);
-  const { image, long_description, name, price } = category || {};
+  const todo = `Create a collection of events and tickets`;
+  const { long_description, name } = category || {};
   const sliders = [
     {
       img: 'https://source.unsplash.com/1200x640/?nature',
