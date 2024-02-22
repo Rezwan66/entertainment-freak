@@ -4,15 +4,15 @@ import PrevEvents from '../components/PrevEvents';
 import Artists from '../components/Artists';
 import ContactUs from '../components/ContactUs';
 import { Element } from 'react-scroll';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import Categories from '../components/Categories';
 
 const Home = () => {
   // const services = useLoaderData();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   // console.log(services);
   return (
     <div>
