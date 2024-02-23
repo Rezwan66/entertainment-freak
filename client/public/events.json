@@ -1,0 +1,227 @@
+[
+  {
+    "categoryId": 1,
+    "name": "Taylor Swift Concert",
+    "image": "https://www.musikexpress.de/wp-content/uploads/2023/10/taylor-swift-1536x1021.jpg",
+    "date": "2024-05-15",
+    "venue": "Stadium XYZ",
+    "description": "Join us for an unforgettable night with Taylor Swift's electrifying performance.",
+    "ticketPrice": 99.99
+  },
+  {
+    "categoryId": 1,
+    "name": "Coachella Music Festival",
+    "image": "https://www.udiscovermusic.com/wp-content/uploads/2017/06/Coachella-GettyImages-673625850-1000x600.jpg",
+    "date": "2024-04-20",
+    "venue": "Empire Polo Club",
+    "description": "Experience the magic of Coachella with top-tier musical performances.",
+    "ticketPrice": 299.99
+  },
+  {
+    "categoryId": 1,
+    "name": "Beyoncé Live in Concert",
+    "image": "https://www.charlotteobserver.com/charlottefive/c5-things-to-do/1jrcr6/picture236094878/alternates/LANDSCAPE_1140/Beyonce",
+    "date": "2024-07-10",
+    "venue": "Arena ABC",
+    "description": "Don't miss the chance to see Beyoncé live on stage with her iconic performances.",
+    "ticketPrice": 199.99
+  },
+  {
+    "categoryId": 2,
+    "name": "Hamlet at Globe Theatre",
+    "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/E5BC/production/_89421885_hamlet,--c-2014-helena-mis.jpg",
+    "date": "2024-06-01",
+    "venue": "Globe Theatre",
+    "description": "Experience Shakespeare's timeless classic, Hamlet, in the historic Globe Theatre.",
+    "ticketPrice": 49.99
+  },
+  {
+    "categoryId": 2,
+    "name": "The Phantom of the Opera",
+    "image": "https://media.ticmate.com//resources/ticmate_live/upload_go/1dc5e22bded62f34-PhntomoftheOper900x600-3.jpg",
+    "date": "2024-07-15",
+    "venue": "Majestic Theatre",
+    "description": "Witness the mesmerizing performance of The Phantom of the Opera in Broadway's iconic Majestic Theatre.",
+    "ticketPrice": 69.99
+  },
+  {
+    "categoryId": 2,
+    "name": "Les Misérables",
+    "image": "https://www.musicalsinlondon.de/assets/images/content/shows/square-poster/original/les-miserables-11.jpg",
+    "date": "2024-08-20",
+    "venue": "Queen's Theatre",
+    "description": "Immerse yourself in the heart-wrenching story of Les Misérables, performed live at the Queen's Theatre.",
+    "ticketPrice": 59.99
+  },
+  {
+    "categoryId": 3,
+    "name": "The Matrix Reloaded Premiere",
+    "image": "https://assets.mubicdn.net/images/film/29495/image-w1280.jpg?1593498767",
+    "date": "2024-09-10",
+    "venue": "Grauman's Chinese Theatre",
+    "description": "Be the first to witness the epic premiere of The Matrix Reloaded at Grauman's Chinese Theatre.",
+    "ticketPrice": 29.99
+  },
+  {
+    "categoryId": 3,
+    "name": "Jurassic Park 30th Anniversary Screening",
+    "image": "https://static.posters.cz/image/750/leinwand-jurassic-park-classic-logo-i111309.jpg",
+    "date": "2024-10-15",
+    "venue": "Regal Cinemas",
+    "description": "Celebrate the 30th anniversary of Jurassic Park with a special screening at Regal Cinemas.",
+    "ticketPrice": 19.99
+  },
+  {
+    "categoryId": 3,
+    "name": "Avengers: Endgame Premiere",
+    "image": "https://sm.ign.com/t/ign_de/screenshot/default/avengers-endgame-poster-cropped-mcu1_w9n7.1280.jpg",
+    "date": "2024-11-20",
+    "venue": "Dolby Theatre",
+    "description": "Witness the epic conclusion to the Avengers saga with the premiere of Avengers: Endgame at Dolby Theatre.",
+    "ticketPrice": 39.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Dave Chappelle Stand-up Special",
+    "image": "https://ew.com/thmb/v3CVz54k3sw9qlMnyGyG0WLyxIM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/dave-chapelle-2efe874513a441cfa2f529e585243c76.jpg",
+    "date": "2024-05-01",
+    "venue": "Comedy Cellar",
+    "description": "Laugh out loud with Dave Chappelle's hilarious stand-up comedy special.",
+    "ticketPrice": 49.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Kevin Hart Live",
+    "image": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbjJD-qRDegSr87RXNsujiin2n7bHuEAF_lerwix2Em0R0Kn4aUXlufPM0PlfakTBzteW0d_WCNrJ44IVaf1JCAgU5ezMyBeRRdZ.jpg?r=152",
+    "date": "2024-06-15",
+    "venue": "Madison Square Garden",
+    "description": "Experience a night of non-stop laughter with Kevin Hart's live comedy show.",
+    "ticketPrice": 59.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Amy Schumer: Growing Tour",
+    "image": "https://www.digitaltrends.com/wp-content/uploads/2015/05/Amy-Schumer-stand-up.jpg?fit=720%2C720&p=1",
+    "date": "2024-07-30",
+    "venue": "Barclays Center",
+    "description": "Join Amy Schumer for a night of hilarious comedy as she performs her 'Growing' tour live.",
+    "ticketPrice": 39.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Chris Rock Live",
+    "image": "https://www.slashfilm.com/img/gallery/chris-rock-stand-up-special-will-stream-live-on-netflix/l-intro-1668128345.jpg",
+    "date": "2024-05-20",
+    "venue": "Comedy Club XYZ",
+    "description": "Get ready for a night of uncontrollable laughter with Chris Rock's hilarious stand-up comedy.",
+    "ticketPrice": 39.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Sarah Silverman Live",
+    "image": "https://consequence.net/wp-content/uploads/2022/12/Sarah-Silverman-2023-Standup-Tour.jpg?quality=80",
+    "date": "2024-06-10",
+    "venue": "Laugh Factory",
+    "description": "Join Sarah Silverman for an evening of sharp wit and comedic genius at the renowned Laugh Factory.",
+    "ticketPrice": 29.99
+  },
+  {
+    "categoryId": 4,
+    "name": "Dave Chappelle Live",
+    "image": "https://images.mubicdn.net/images/film/168894/cache-211448-1490740208/image-w1280.jpg?size=800x",
+    "date": "2024-07-25",
+    "venue": "Comedy Cellar",
+    "description": "Laugh till your sides hurt with Dave Chappelle's legendary stand-up comedy performance at Comedy Cellar.",
+    "ticketPrice": 49.99
+  },
+  {
+    "categoryId": 5,
+    "name": "NBA Finals Game 7",
+    "image": "https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/39bbfd64793fdc2db6c4de51603ebe1667abeb9f0400f93026bc2ae29f047ce7.jpg",
+    "date": "2024-06-20",
+    "venue": "Staples Center",
+    "description": "Witness the excitement of NBA Finals Game 7 as two top teams battle it out for the championship title at Staples Center.",
+    "ticketPrice": 199.99
+  },
+  {
+    "categoryId": 5,
+    "name": "Super Bowl LVIII",
+    "image": "https://www.allegiantstadium.com/assets/img/super-bowl-stadium-800x500-2a7ec7d60a.jpg",
+    "date": "2025-02-02",
+    "venue": "Mercedes-Benz Stadium",
+    "description": "Experience the thrill of the Super Bowl live at Mercedes-Benz Stadium, where champions are made and legends are born.",
+    "ticketPrice": 999.99
+  },
+  {
+    "categoryId": 5,
+    "name": "Wimbledon Men's Singles Final",
+    "image": "https://img.jagranjosh.com/images/2021/July/572021/Wimbledon%20Mens%20Single%202021%20Winners%20List.jpg",
+    "date": "2024-07-14",
+    "venue": "Wimbledon Centre Court",
+    "description": "Cheer for your favorite tennis stars as they compete in the prestigious Wimbledon Men's Singles Final at Centre Court.",
+    "ticketPrice": 299.99
+  },
+  {
+    "categoryId": 5,
+    "name": "Wimbledon Women's Singles Final",
+    "image": "https://www.thesun.co.uk/wp-content/uploads/2017/07/NINTCHDBPICT000660687994.jpg",
+    "date": "2024-02-14",
+    "venue": "Wimbledon Centre Court",
+    "description": "Cheer for your favorite female tennis stars as they compete in the prestigious Wimbledon Women's Singles Final at Centre Court.",
+    "ticketPrice": 199.99
+  },
+  {
+    "categoryId": 5,
+    "name": "UEFA Champions League Final",
+    "image": "https://editorial.uefa.com/resources/0289-1a01ec8fc5df-2bac0840aafe-1000/uefa_champions_league_final_2023_24_host_city_trophy_shoot.jpeg",
+    "date": "2024-06-01",
+    "venue": "Atatürk Olympic Stadium",
+    "description": "Witness the excitement of the UEFA Champions League Final as Europe's top football clubs battle for glory.",
+    "ticketPrice": 149.99
+  },
+  {
+    "categoryId": 5,
+    "name": "Premier League: Manchester City vs. Liverpool",
+    "image": "https://dailypost.ng/wp-content/uploads/2019/08/Manchester-City-vs-Liverpool.jpg",
+    "date": "2024-04-15",
+    "venue": "Etihad Stadium",
+    "description": "Experience the intense clash between Manchester City and Liverpool in this highly anticipated Premier League match.",
+    "ticketPrice": 99.99
+  },
+  {
+    "categoryId": 5,
+    "name": "Bundesliga: Bayern Munich vs. Borussia Dortmund",
+    "image": "https://m.media-amazon.com/images/M/MV5BZjcxYzEyODQtMDJjYy00YzRlLTg3ZWMtMDZlYzE0ZmQ3Y2VhXkEyXkFqcGdeQXVyNDg4MjkzNDk@._V1_.jpg",
+    "date": "2024-05-20",
+    "venue": "Allianz Arena",
+    "description": "Don't miss the showdown between Bayern Munich and Borussia Dortmund in this highly anticipated Bundesliga clash.",
+    "ticketPrice": 79.99
+  },
+  {
+    "categoryId": 6,
+    "name": "Paris Fashion Week",
+    "image": "https://akm-img-a-in.tosshub.com/lingo/hrb/images/story/202309/untitled_design_-_2023-09-25t103223.782-sixteen_nine.png?size=945:532",
+    "date": "2024-09-30",
+    "venue": "Various Locations",
+    "description": "Be part of the fashion elite at Paris Fashion Week, where haute couture meets high fashion in the City of Light.",
+    "ticketPrice": 499.99
+  },
+  {
+    "categoryId": 6,
+    "name": "New York Fashion Week",
+    "image": "https://www.instyle.com/thmb/4lyzDzOCOYiiHcGuQstMx1FUO1Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1653678274-4959c9e48eed49f792ac6a584e49e37b.jpg",
+    "date": "2024-11-15",
+    "venue": "Various Locations",
+    "description": "Experience the latest trends and designs at New York Fashion Week, the premier event for fashion enthusiasts.",
+    "ticketPrice": 399.99
+  },
+  {
+    "categoryId": 6,
+    "name": "Milan Fashion Week",
+    "image": "https://cdn.mos.cms.futurecdn.net/AwuDzfV4E3eQWXRN9sYWVZ.jpg",
+    "date": "2025-02-20",
+    "venue": "Various Locations",
+    "description": "Immerse yourself in the world of Italian fashion at Milan Fashion Week, where style and elegance converge.",
+    "ticketPrice": 599.99
+  }
+]
