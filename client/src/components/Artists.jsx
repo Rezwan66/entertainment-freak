@@ -26,7 +26,7 @@ const Artists = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-between gap-6 px-10 lg:px-0">
       {artists?.map(artist => (
-        <ArtistCard key={artist.id} artist={artist}></ArtistCard>
+        <ArtistCard key={artist._id} artist={artist}></ArtistCard>
       ))}
     </div>
   );

@@ -23,7 +23,7 @@ const PrevEvents = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-4 lg:px-0">
       {events?.map(event => (
-        <PrevEventCard key={event.id} event={event}></PrevEventCard>
+        <PrevEventCard key={event._id} event={event}></PrevEventCard>
       ))}
     </div>
   );
