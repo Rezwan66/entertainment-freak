@@ -2,6 +2,7 @@ import toast from 'react-hot-toast';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { DynamicBanner } from '../components/DynamicBanner';
 import { useEffect, useState } from 'react';
+import ServiceCard from '../components/ServiceCard';
 
 const ServiceDetails = () => {
   const [events, setEvents] = useState([]);
@@ -28,27 +29,29 @@ const ServiceDetails = () => {
         {/* my card */}
         {events &&
           events.map(event => (
-            <div
-              key={event.categoryId}
-              className=" bg-base-200 bg-opacity-40 rounded-xl gap-4 p-6 md:p-0"
-            >
-              <img
-                className="md:w-full h-40 md:rounded-l-xl object-cover"
-                src={event.image}
-                alt=""
-              />
-              <div className="text-white md:p-6 space-y-4">
-                <h1 className="text-4xl font-bold">{event.name}</h1>
-                {/* <h3 className="text-xl">{long_description}</h3> */}
-                <br />
-                <button
-                  onClick={() => toast.success('Booked Successfully!')}
-                  className="btn btn-warning w-full capitalize text-lg"
-                >
-                  Book now for only:
-                </button>
-              </div>
-            </div>
+            // <div
+            //   key={event.categoryId}
+            //   className=" bg-base-200 bg-opacity-40 rounded-xl gap-4 p-6 md:p-0"
+            // >
+            //   <img
+            //     className="md:w-full h-40 md:rounded-l-xl object-cover"
+            //     src={event.image}
+            //     alt=""
+            //   />
+            //   <div className="text-white md:p-6 space-y-4">
+            //     <h1 className="text-4xl font-bold">{event.name}</h1>
+            //     {/* <h3 className="text-xl">{long_description}</h3> */}
+            //     <br />
+            //     <button
+            //       onClick={() => toast.success('Booked Successfully!')}
+            //       className="btn btn-warning w-full capitalize text-lg"
+            //     >
+            //       Book now for only:
+            //     </button>
+            //   </div>
+            // </div>
+
+            <ServiceCard key={event.categoryId} service={event} />
           ))}
       </div>
     </div>

@@ -10,17 +10,21 @@ const ServiceCard = ({ service }) => {
     <div data-aos="zoom-in">
       <div className="card glass">
         <figure>
-          <img className="h-80 w-full" src={image} alt="service image" />
+          <img
+            className="h-80 w-full object-cover"
+            src={image}
+            alt="service image"
+          />
         </figure>
         <div className="card-body text-white">
-          <h2 className="card-title">{name}</h2>
-          <p>{short_description}</p>
-          <i className="mb-6 text-lg">
-            <b>Book now:</b> ${price}
+          <h2 className="card-title  tracking-wider">{name}</h2>
+          <p className="text-sm">{short_description}</p>
+          <i className="my-6 text-sm">
+            <b>Book now:</b> from ${price}
           </i>
           <div className="card-actions justify-center">
             <Link to={`/category/${id}`} className="w-full">
-              <button className="btn btn-warning w-full capitalize">
+              <button className="btn btn-warning w-full capitalize font-bold">
                 Learn More!
               </button>
             </Link>
