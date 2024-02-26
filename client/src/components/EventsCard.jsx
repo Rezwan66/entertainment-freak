@@ -15,10 +15,10 @@ const EventsCard = ({ event }) => {
   } = event || {};
   return (
     <div data-aos="zoom-in">
-      <div className="card glass max-h-[544px]">
+      <div className="card glass max-h-[544px] group">
         <figure>
           <img
-            className="h-80 w-full object-cover"
+            className="h-80 w-full object-cover group-hover:scale-125 transition"
             src={image}
             alt="service image"
           />
@@ -27,7 +27,11 @@ const EventsCard = ({ event }) => {
           <h2 className="card-title  tracking-wider">
             {name?.length > 30 ? `${name.slice(0, 30)}` : name}
           </h2>
-          <p className="text-sm">{description}</p>
+          <p className="text-sm">
+            {description?.length > 100
+              ? `${description.slice(0, 100)}`
+              : description}
+          </p>
           <i className="my-6 text-sm">
             <b>Book now:</b> from ${ticketPrice}
           </i>
