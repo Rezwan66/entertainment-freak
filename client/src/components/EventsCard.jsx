@@ -1,3 +1,4 @@
+import { Tooltip } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -18,7 +19,7 @@ const EventsCard = ({ event }) => {
       <div className="card glass max-h-[544px] group">
         <figure>
           <img
-            className="h-80 w-full object-cover group-hover:scale-125 transition"
+            className="h-80 w-full object-cover group-hover:scale-110 transition"
             src={image}
             alt="service image"
           />
@@ -27,12 +28,14 @@ const EventsCard = ({ event }) => {
           <h2 className="card-title  tracking-wider">
             {name?.length > 30 ? `${name.slice(0, 30)}` : name}
           </h2>
-          <p className="text-sm">
-            {description?.length > 100
-              ? `${description.slice(0, 100)}`
-              : description}
-          </p>
-          <i className="my-6 text-sm">
+          <Tooltip title={description} placement="top-end" arrow>
+            <p className="text-sm cursor-pointer">
+              {description?.length > 100
+                ? `${description.slice(0, 100)}`
+                : description}
+            </p>
+          </Tooltip>
+          <i className="mt-2 text-sm">
             <b>Book now:</b> from ${ticketPrice}
           </i>
           <div className="card-actions justify-center">
