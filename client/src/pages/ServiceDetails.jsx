@@ -1,18 +1,18 @@
 // import toast from 'react-hot-toast';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import { DynamicBanner } from '../components/DynamicBanner';
 import { useEffect, useState } from 'react';
 import EventsCard from '../components/EventsCard';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const ServiceDetails = () => {
   const [events, setEvents] = useState([]);
-  useEffect(() => {
-    fetch('/events.json')
-      .then(res => res.json())
-      .then(data => setEvents(data));
-  }, []);
+  const axiosSecure = useAxiosSecure();
   const category = useLoaderData();
-  // const { id } = useParams();
+  const { id } = useParams();
+  useEffect(() => {
+    axiosSecure(`/events?categoryId=${id}`).then(res => setEvents(res.data));
+  }, [axiosSecure, id]);
   // const idInt = parseInt(id);
   // console.log(idInt, events);
 

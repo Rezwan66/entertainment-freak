@@ -15,7 +15,7 @@ const EventsCard = ({ event }) => {
   } = event || {};
   return (
     <div data-aos="zoom-in">
-      <div className="card glass">
+      <div className="card glass max-h-[544px]">
         <figure>
           <img
             className="h-80 w-full object-cover"
