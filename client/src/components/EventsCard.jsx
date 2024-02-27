@@ -35,15 +35,13 @@ const EventsCard = ({ event }) => {
                 : description}
             </p>
           </Tooltip>
-          <i className="mt-2 text-sm">
+          <i className="mb-4 text-sm">
             <b>Book now:</b> from ${ticketPrice}
           </i>
           <div className="card-actions justify-center">
-            {/* <Link to={`/category/${id}`} className="w-full">
-              <button className="btn btn-warning w-full capitalize font-bold">
-                Learn More!
-              </button>
-            </Link> */}
+            <button className="btn btn-warning w-full capitalize font-bold">
+              Tickets
+            </button>
           </div>
         </div>
       </div>
