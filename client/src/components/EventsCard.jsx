@@ -26,9 +26,15 @@ const EventsCard = ({ event }) => {
           />
         </figure>
         <div className="card-body text-white">
-          <h2 className="card-title  tracking-wider">
-            {name?.length > 30 ? `${name.slice(0, 30)}` : name}
-          </h2>
+          <div>
+            <h2 className="card-title  tracking-wider">
+              {name?.length > 30 ? `${name.slice(0, 30)}` : name}
+            </h2>
+            <i>{date}</i>
+            <i>{venue}</i>
+            <i>{_id}</i>
+            <i>{categoryId}</i>
+          </div>
           <Tooltip title={description} placement="top-end" arrow>
             <p className="text-sm cursor-pointer">
               {description?.length > 100
