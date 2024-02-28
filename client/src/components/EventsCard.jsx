@@ -1,6 +1,7 @@
 import { Tooltip } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import TicketsModal from './TicketsModal';
 AOS.init();
 
 const EventsCard = ({ event }) => {
@@ -39,9 +40,10 @@ const EventsCard = ({ event }) => {
             <b>Book now:</b> from ${ticketPrice}
           </i>
           <div className="card-actions justify-center">
-            <button className="btn btn-warning w-full capitalize font-bold">
+            {/* <button className="btn btn-warning w-full capitalize font-bold">
               Tickets
-            </button>
+            </button> */}
+            <TicketsModal />
           </div>
         </div>
       </div>
