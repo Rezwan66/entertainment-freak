@@ -1,7 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 
-export default function TicketsModal() {
+export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -54,7 +54,7 @@ export default function TicketsModal() {
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Payment successful
+                    Buy Ticket
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">

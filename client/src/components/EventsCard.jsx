@@ -49,7 +49,7 @@ const EventsCard = ({ event }) => {
             {/* <button className="btn btn-warning w-full capitalize font-bold">
               Tickets
             </button> */}
-            <TicketsModal />
+            <TicketsModal event={event} />
           </div>
         </div>
       </div>
