@@ -4,6 +4,17 @@ import { Fragment, useState } from 'react';
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
 
+  const {
+    _id,
+    categoryId,
+    name,
+    image,
+    date,
+    venue,
+    description,
+    ticketPrice,
+  } = event || {};
+
   function closeModal() {
     setIsOpen(false);
   }
@@ -57,10 +68,7 @@ export default function TicketsModal({ event }) {
                     Buy Ticket
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Your payment has been successfully submitted. We’ve sent
-                      you an email with all of the details of your order.
-                    </p>
+                    <p className="text-sm text-gray-500">{description}</p>
                   </div>
 
                   <div className="mt-4">
