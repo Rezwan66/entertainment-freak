@@ -68,8 +68,10 @@ export default function TicketsModal({ event }) {
                     Buy Ticket
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm text-white">{name}</p>
-                    <p className="text-sm text-white">{date}</p>
+                    <div className="flex justify-between items-center">
+                      <p className="text-sm text-white">{name}</p>
+                      <p className="text-sm text-white">{date}</p>
+                    </div>
                     <p className="text-sm text-white">{description}</p>
                   </div>
 
