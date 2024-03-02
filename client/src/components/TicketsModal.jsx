@@ -68,6 +68,8 @@ export default function TicketsModal({ event }) {
                     Buy Ticket
                   </Dialog.Title>
                   <div className="mt-2">
+                    <p className="text-sm text-white">{name}</p>
+                    <p className="text-sm text-white">{date}</p>
                     <p className="text-sm text-white">{description}</p>
                   </div>
 
