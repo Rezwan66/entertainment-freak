@@ -1,11 +1,24 @@
 import { Dialog, Transition } from '@headlessui/react';
+import { useQuery } from '@tanstack/react-query';
 import { Fragment, useState } from 'react';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
+  const axiosSecure = useAxiosSecure();
 
   const { _id, categoryId, name, image, date, venue, ticketPrice } =
     event || {};
+
+  const { data: tickets = {}, refetch } = useQuery({
+    queryKey: ['tickets'],
+    queryFn: async () => {
+      const res = await axiosSecure(`/tickets/${_id}`);
+      return res.data;
+    },
+  });
+
+  console.log(tickets);
 
   function closeModal() {
     setIsOpen(false);
