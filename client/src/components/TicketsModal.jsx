@@ -27,7 +27,9 @@ export default function TicketsModal({ event }) {
 
   if (isPending || isFetching || isLoading) return <SpinnerSmall />;
 
-  // console.log(tickets);
+  console.log(tickets);
+
+  const { eventId, tickets: ticketArray } = tickets || {};
 
   function closeModal() {
     setIsOpen(false);
@@ -97,6 +99,14 @@ export default function TicketsModal({ event }) {
                     <p className="text-sm text-white">
                       Starts from: ${ticketPrice}
                     </p>
+                    <p className="text-sm text-white">{eventId}</p>
+                    <div className="text-sm text-white">
+                      {ticketArray?.map(t => (
+                        <p key={t.ticketType}>
+                          {t.ticketType + ' ' + t.quantity}{' '}
+                        </p>
+                      ))}
+                    </div>
                   </div>
 
                   <div className="mt-4">
