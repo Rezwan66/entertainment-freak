@@ -2,6 +2,7 @@ import { Dialog, Transition } from '@headlessui/react';
 import { useQuery } from '@tanstack/react-query';
 import { Fragment, useState } from 'react';
 import useAxiosSecure from '../hooks/useAxiosSecure';
+import SpinnerSmall from './SpinnerSmall';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
@@ -10,7 +11,13 @@ export default function TicketsModal({ event }) {
   const { _id, categoryId, name, image, date, venue, ticketPrice } =
     event || {};
 
-  const { data: tickets = {}, refetch } = useQuery({
+  const {
+    data: tickets = {},
+    refetch,
+    isPending,
+    isFetching,
+    isLoading,
+  } = useQuery({
     queryKey: ['tickets'],
     queryFn: async () => {
       const res = await axiosSecure(`/tickets/${_id}`);
@@ -18,7 +25,9 @@ export default function TicketsModal({ event }) {
     },
   });
 
-  console.log(tickets);
+  if (isPending || isFetching || isLoading) return <SpinnerSmall />;
+
+  // console.log(tickets);
 
   function closeModal() {
     setIsOpen(false);
