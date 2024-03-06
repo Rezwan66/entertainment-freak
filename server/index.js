@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 // middleware
@@ -40,6 +40,7 @@ async function run() {
         const previousEventsCollection = client.db('entertainmentDB').collection('previousEvents');
         const categoriesCollection = client.db('entertainmentDB').collection('categories');
         const eventsCollection = client.db('entertainmentDB').collection('events');
+        const ticketsCollection = client.db('entertainmentDB').collection('tickets');
 
         app.get('/artists', async (req, res) => {
             const result = await artistsCollection.find().toArray();
@@ -65,7 +66,13 @@ async function run() {
             if (categoryId) {
                 query.categoryId = parseInt(categoryId);
             }
-            const result = await eventsCollection.find(query).toArray();
+            const result = await eventsCollection.find(query, { projection: { _id: 1 } }).toArray();
+            res.send(result);
+        });
+        app.get('/tickets/:eventId', async (req, res) => {
+            const eventId = req.params.eventId;
+            const query = { eventId };
+            const result = await ticketsCollection.findOne(query);
             res.send(result);
         });
     } finally {
