@@ -66,7 +66,7 @@ async function run() {
             if (categoryId) {
                 query.categoryId = parseInt(categoryId);
             }
-            const result = await eventsCollection.find(query, { projection: { _id: 1 } }).toArray();
+            const result = await eventsCollection.find(query).toArray();
             res.send(result);
         });
         app.get('/tickets/:eventId', async (req, res) => {
