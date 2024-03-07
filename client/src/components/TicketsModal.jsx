@@ -103,7 +103,7 @@ export default function TicketsModal({ event }) {
                     <div className="text-sm text-white">
                       {ticketArray?.map(t => (
                         <p key={t.ticketType}>
-                          {t.ticketType + ' ' + t.quantity}{' '}
+                          {t.ticketType + ' ' + t.quantity + ' $' + t.price}
                         </p>
                       ))}
                     </div>
