@@ -6,6 +6,7 @@ import SpinnerSmall from './SpinnerSmall';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
+  const [quantity, setQuantity] = useState(1);
   const axiosSecure = useAxiosSecure();
 
   const { _id, categoryId, name, image, date, venue, ticketPrice } =
@@ -27,7 +28,7 @@ export default function TicketsModal({ event }) {
 
   if (isPending || isFetching || isLoading) return <SpinnerSmall />;
 
-  console.log(tickets);
+  // console.log(tickets);
 
   const { eventId, tickets: ticketArray } = tickets || {};
 
@@ -105,20 +106,26 @@ export default function TicketsModal({ event }) {
                         <div key={t.ticketType}>
                           {t.ticketType + ' ' + t.quantity + ' $' + t.price}
                           <div className="flex items-center border-gray-100">
-                            <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                            <button
+                              onClick={() => setQuantity(quantity - 1)}
+                              className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                            >
                               {' '}
                               -{' '}
-                            </span>
+                            </button>
                             <input
                               className="h-7 w-7 border bg-white text-center text-xs outline-none"
                               type="text"
-                              value="2"
+                              value={quantity}
                               min="1"
                             />
-                            <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                            <button
+                              onClick={() => setQuantity(quantity + 1)}
+                              className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
+                            >
                               {' '}
                               +{' '}
-                            </span>
+                            </button>
                           </div>
                         </div>
                       ))}
