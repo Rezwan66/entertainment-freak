@@ -100,11 +100,14 @@ export default function TicketsModal({ event }) {
                       Starts from: ${ticketPrice}
                     </p>
                     <p className="text-sm text-white">{eventId}</p>
-                    <div className="text-sm text-white">
+                    <div className="text-sm text-white flex flex-col gap-4">
                       {ticketArray?.map(t => (
-                        <p key={t.ticketType}>
+                        <div key={t.ticketType}>
                           {t.ticketType + ' ' + t.quantity + ' $' + t.price}
-                        </p>
+                          <button className="btn btn-xs btn-circle ml-4">
+                            +
+                          </button>
+                        </div>
                       ))}
                     </div>
                   </div>
