@@ -100,13 +100,26 @@ export default function TicketsModal({ event }) {
                       Starts from: ${ticketPrice}
                     </p>
                     <p className="text-sm text-white">{eventId}</p>
-                    <div className="text-sm text-white flex flex-col gap-4">
+                    <div className="text-sm  flex flex-col gap-4">
                       {ticketArray?.map(t => (
                         <div key={t.ticketType}>
                           {t.ticketType + ' ' + t.quantity + ' $' + t.price}
-                          <button className="btn btn-xs btn-circle ml-4">
-                            +
-                          </button>
+                          <div className="flex items-center border-gray-100">
+                            <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                              {' '}
+                              -{' '}
+                            </span>
+                            <input
+                              className="h-7 w-7 border bg-white text-center text-xs outline-none"
+                              type="text"
+                              value="2"
+                              min="1"
+                            />
+                            <span className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50">
+                              {' '}
+                              +{' '}
+                            </span>
+                          </div>
                         </div>
                       ))}
                     </div>
