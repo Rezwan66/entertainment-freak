@@ -104,7 +104,9 @@ export default function TicketsModal({ event }) {
                     <div className="text-sm  flex flex-col gap-4">
                       {ticketArray?.map(t => (
                         <div key={t.ticketType}>
-                          {t.ticketType + ' ' + t.quantity + ' $' + t.price}
+                          <p className="text-white">
+                            {t.ticketType + ' ' + t.quantity + ' $' + t.price}
+                          </p>
                           <div className="flex items-center border-gray-100">
                             <button
                               onClick={() => setQuantity(quantity - 1)}
