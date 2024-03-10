@@ -33,11 +33,15 @@ const AuthProvider = ({ children }) => {
         axiosSecure.post('/jwt', loggedUser).then(res => {
           console.log(res.data);
         });
+      } else {
+        axiosSecure.post('/logout', loggedUser).then(res => {
+          console.log(res.data);
+        });
       }
     });
 
     return () => unSubscribe();
-  }, []);
+  }, [axiosSecure, user?.email]);
   //   console.log(user);
 
   // create user with email & password

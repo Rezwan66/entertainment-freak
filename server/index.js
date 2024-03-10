@@ -56,6 +56,14 @@ async function run() {
                 sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             }).send({ success: true });
         });
+        app.post('/logout', async (req, res) => {
+            const user = req.body;
+            res.clearCookie('token', {
+                maxAge: 0,
+                sameSite: 'none',
+                secure: true
+            }).send({ success: true });
+        });
 
         app.get('/artists', async (req, res) => {
             const result = await artistsCollection.find().toArray();
