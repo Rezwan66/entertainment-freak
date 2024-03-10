@@ -11,6 +11,7 @@ import {
 } from 'firebase/auth';
 import { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase.config';
+import useAxiosSecure from '../hooks/useAxiosSecure';
 
 const auth = getAuth(app);
 export const AuthContext = createContext(null);
@@ -19,11 +20,20 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const axiosSecure = useAxiosSecure();
   // observe user
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, currentUser => {
+      const userEmail = currentUser?.email || user?.email;
+      const loggedUser = { email: userEmail };
       setUser(currentUser);
+      console.log('current user', currentUser);
       setLoading(false);
+      if (currentUser) {
+        axiosSecure.post('/jwt', loggedUser).then(res => {
+          console.log(res.data);
+        });
+      }
     });
 
     return () => unSubscribe();
