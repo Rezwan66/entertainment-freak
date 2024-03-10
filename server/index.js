@@ -2,19 +2,22 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
 // middleware
 const corsOptions = {
     origin: [
-        'http://localhost:5173',
+        'http://localhost:5173', 'https://entertainment-freak.web.app', 'https://entertainment-freak.firebaseapp.com'
     ],
     credentials: true,
     optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
 app.use(express.json());
+app.use(cookieParser());
 
 
 // const uri = "mongodb+srv://<username>:<password>@cluster0.zjzxbzp.mongodb.net/?retryWrites=true&w=majority";
@@ -41,6 +44,18 @@ async function run() {
         const categoriesCollection = client.db('entertainmentDB').collection('categories');
         const eventsCollection = client.db('entertainmentDB').collection('events');
         const ticketsCollection = client.db('entertainmentDB').collection('tickets');
+
+        // JWT Related API
+        app.post('/jwt', async (req, res) => {
+            const user = req.body;
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production' ? true : false,
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
+            }).send({ success: true });
+        });
 
         app.get('/artists', async (req, res) => {
             const result = await artistsCollection.find().toArray();
