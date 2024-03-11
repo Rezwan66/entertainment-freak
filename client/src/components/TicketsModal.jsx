@@ -14,7 +14,7 @@ export default function TicketsModal({ event }) {
 
   const {
     data: tickets = {},
-    refetch,
+    // refetch,
     isPending,
     isFetching,
     isLoading,
@@ -100,6 +100,7 @@ export default function TicketsModal({ event }) {
                     <p className="text-sm text-white">
                       Starts from: ${ticketPrice}
                     </p>
+                    <p className="text-sm text-white">{categoryId}</p>
                     <p className="text-sm text-white">{eventId}</p>
                     <div className="text-sm  flex flex-col gap-4">
                       {ticketArray?.map(t => (
