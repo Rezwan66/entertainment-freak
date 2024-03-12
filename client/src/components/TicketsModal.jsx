@@ -141,7 +141,7 @@ export default function TicketsModal({ event }) {
                       className="btn btn-warning w-full capitalize font-bold"
                       onClick={closeModal}
                     >
-                      Buy Ticket Now!
+                      Add to Cart!
                     </button>
                   </div>
                 </Dialog.Panel>
