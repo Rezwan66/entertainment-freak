@@ -115,6 +115,7 @@ const Banner = () => {
       infiniteLoop={true}
       autoPlay={true}
       interval={2500}
+      // autoFocus={true}
       showStatus={false}
     >
       <div id="slide1">
