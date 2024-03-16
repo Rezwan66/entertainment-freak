@@ -46,3 +46,7 @@ npm run dev
 [Firebase Deploy](https://entertainment-freak.web.app/) - https://entertainment-freak.web.app/
 
 [Netlify](https://playful-lamington-248ae1.netlify.app/)
+
+### New Features
+
+- Implemented server side to store data about events and tickets.
