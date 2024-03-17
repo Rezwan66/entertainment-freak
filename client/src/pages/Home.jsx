@@ -4,16 +4,35 @@ import PrevEvents from '../components/PrevEvents';
 import Artists from '../components/Artists';
 import ContactUs from '../components/ContactUs';
 import { Element } from 'react-scroll';
-// import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Categories from '../components/Categories';
+import useAxiosPublic from '../hooks/useAxiosPublic';
+import SpinnerSmall from '../components/SpinnerSmall';
 
 const Home = () => {
-  // const services = useLoaderData();
+  const [services, setServices] = useState([]);
+  const [events, setEvents] = useState([]);
+  const [artists, setArtists] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const axiosPublic = useAxiosPublic();
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
-  // console.log(services);
+  useEffect(() => {
+    axiosPublic('/categories').then(res => {
+      setServices(res.data);
+    });
+    axiosPublic('/previousEvents').then(res => {
+      setEvents(res.data);
+    });
+    axiosPublic('/artists').then(res => {
+      setArtists(res.data);
+    });
+    setLoading(false);
+  }, [axiosPublic]);
+
+  if (loading) {
+    return <SpinnerSmall />;
+  }
+
   return (
     <div>
       {/* slider */}
@@ -24,21 +43,21 @@ const Home = () => {
           <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Our Event Categories
           </h2>
-          <Categories />
+          <Categories services={services} />
         </Element>
         {/* our previous shows */}
         <div>
           <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Our Previous Events
           </h2>
-          <PrevEvents></PrevEvents>
+          <PrevEvents events={events} />
         </div>
         {/* artists we worked with */}
         <div>
           <h2 className="text-2xl md:text-4xl mt-16 mb-10 text-center font-semibold underline underline-offset-8 text-amber-300">
             Artists We Worked With
           </h2>
-          <Artists></Artists>
+          <Artists artists={artists} />
         </div>
         {/* Contact us today */}
         <div className="my-24">

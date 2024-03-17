@@ -3,23 +3,27 @@ import useAxiosPublic from '../hooks/useAxiosPublic';
 import ArtistCard from './ArtistCard';
 import SpinnerSmall from './SpinnerSmall';
 
-const Artists = () => {
-  const [artists, setArtists] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const axiosPublic = useAxiosPublic();
-  useEffect(() => {
-    // fetch('/artists.json')
-    //   .then(res => res.json())
-    //   .then(data => setArtists(data));
-    axiosPublic('/artists').then(res => {
-      setArtists(res.data);
-      setLoading(false);
-    });
-  }, [axiosPublic]);
+const Artists = ({ artists }) => {
+  // const [artists, setArtists] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const axiosPublic = useAxiosPublic();
+  // useEffect(() => {
+  //   // fetch('/artists.json')
+  //   //   .then(res => res.json())
+  //   //   .then(data => setArtists(data));
+  //   try {
+  //     axiosPublic('/artists').then(res => {
+  //       setArtists(res.data);
+  //       setLoading(false);
+  //     });
+  //   } catch (error) {
+  //     console.log(error.message);
+  //   }
+  // }, [axiosPublic]);
 
-  if (loading) {
-    return <SpinnerSmall />;
-  }
+  // if (loading) {
+  //   return <SpinnerSmall />;
+  // }
 
   // console.log(artists);
 
