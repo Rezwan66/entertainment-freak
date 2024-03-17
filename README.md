@@ -51,3 +51,4 @@ npm run dev
 
 - Implemented server side to store data about events and tickets.
 - Displayed homepage banner using React-Responsive-Carousel.
+- TODO: Fix the cookie jwt error
