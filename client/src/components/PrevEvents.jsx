@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import PrevEventCard from './PrevEventCard';
-import useAxiosPublic from '../hooks/useAxiosPublic';
-import SpinnerSmall from './SpinnerSmall';
+// import useAxiosPublic from '../hooks/useAxiosPublic';
+// import SpinnerSmall from './SpinnerSmall';
 
 const PrevEvents = ({ events }) => {
   // const [events, setEvents] = useState([]);

@@ -1,8 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import ServiceCard from './ServiceCard';
-import { useEffect } from 'react';
-import useAxiosPublic from '../hooks/useAxiosPublic';
-import SpinnerSmall from './SpinnerSmall';
+// import { useEffect } from 'react';
+// import useAxiosPublic from '../hooks/useAxiosPublic';
+// import SpinnerSmall from './SpinnerSmall';
 
 const Categories = ({ services }) => {
   // const [services, setServices] = useState([]);

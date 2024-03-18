@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
-import useAxiosPublic from '../hooks/useAxiosPublic';
+// import { useEffect, useState } from 'react';
+// import useAxiosPublic from '../hooks/useAxiosPublic';
 import ArtistCard from './ArtistCard';
-import SpinnerSmall from './SpinnerSmall';
+// import SpinnerSmall from './SpinnerSmall';
 
 const Artists = ({ artists }) => {
   // const [artists, setArtists] = useState([]);
