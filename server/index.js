@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 require('dotenv').config();
 const cors = require('cors');
-const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
+const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.PORT || 5000;
 
@@ -52,7 +52,7 @@ async function run() {
 
             res.cookie('token', token, {
                 httpOnly: true,
-                secure: process.env.NODE_ENV === 'production' ? true : false,
+                secure: process.env.NODE_ENV === 'production',
                 sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             }).send({ success: true });
         });

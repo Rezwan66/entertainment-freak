@@ -28,7 +28,9 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.id}`),
+          fetch(
+            `https://entertainment-freak-server.vercel.app/categories/${params.id}`
+          ),
       },
       {
         path: '/upcoming',
