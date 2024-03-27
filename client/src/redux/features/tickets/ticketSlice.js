@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    ticketCount: 100
+    count: 100
 };
 
 const ticketSlice = createSlice({
