@@ -3,11 +3,13 @@ import { useQuery } from '@tanstack/react-query';
 import { Fragment, useState } from 'react';
 import useAxiosSecure from '../hooks/useAxiosSecure';
 import SpinnerSmall from './SpinnerSmall';
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+  // const [quantity, setQuantity] = useState(1);
   const axiosSecure = useAxiosSecure();
+  const { ticketCount } = useSelector(state => state.tickets);
 
   const { _id, categoryId, name, image, date, venue, ticketPrice } =
     event || {};
@@ -119,7 +121,7 @@ export default function TicketsModal({ event }) {
                             <input
                               className="h-7 w-7 border bg-white text-center text-xs outline-none"
                               type="text"
-                              value={quantity}
+                              value={ticketCount}
                               min="1"
                             />
                             <button

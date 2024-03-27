@@ -1,13 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    count: 0
+    ticketCount: 100
 };
 
 const ticketSlice = createSlice({
     name: 'ticket',
     initialState,
-    reducers: {},
+    reducers: {
+        increment: (state) => {
+            state.count = state.count + 1;
+        },
+        decrement: (state) => {
+            state.count = state.count - 1;
+        }
+    },
 });
+
+export const { increment, decrement } = ticketSlice.actions;
 
 export default ticketSlice.reducer;
