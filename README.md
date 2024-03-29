@@ -53,3 +53,5 @@ npm run dev
 - Displayed homepage banner using React-Responsive-Carousel.
 - TODO: Fix the cookie jwt error----fixed the server error for now----go back to implementing the ticketing and ticket cart feature----try to implement some kind of dashboard with stats and chart----finish the ticketing platform
 - React-Marquee to display actors worked with.
+- TODO: create a new tickets collection in MongoDB with category id/name, event id/name, ticket price, quantity, etc.
+- Fetch each ticket data by category/event id/name, manage state of ticket quantity with Redux.
