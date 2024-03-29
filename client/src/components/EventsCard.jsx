@@ -6,8 +6,8 @@ AOS.init();
 
 const EventsCard = ({ event }) => {
   const {
-    _id,
-    categoryId,
+    // _id,
+    // categoryId,
     name,
     image,
     date,
