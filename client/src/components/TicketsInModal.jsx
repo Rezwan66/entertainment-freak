@@ -17,7 +17,8 @@ const TicketsInModal = ({ t }) => {
         <input
           className="h-7 w-7 border bg-white text-center text-xs outline-none"
           type="text"
-          value={t.quantity}
+          //   value={t.quantity}
+          defaultValue={1}
           min="1"
         />
         {/* <h3>{count}</h3> */}
