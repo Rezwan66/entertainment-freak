@@ -9,6 +9,7 @@ import TicketsInModal from './TicketsInModal';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
+  const [ticketQuantity, setTicketQuantity] = useState([]);
   // const [quantity, setQuantity] = useState(1);
   const axiosSecure = useAxiosSecure();
   // const { count } = useSelector(state => state.tickets);
@@ -36,6 +37,7 @@ export default function TicketsModal({ event }) {
   // console.log(tickets);
 
   const { eventId, tickets: ticketArray } = tickets || {};
+  // console.log(ticketArray, ticketQuantity);
 
   function closeModal() {
     setIsOpen(false);
@@ -109,7 +111,12 @@ export default function TicketsModal({ event }) {
                     <p className="text-sm text-white">{eventId}</p>
                     <div className="text-sm  flex flex-col gap-4">
                       {ticketArray?.map(t => (
-                        <TicketsInModal key={t.ticketType} t={t} />
+                        <TicketsInModal
+                          key={t.ticketType}
+                          t={t}
+                          ticketQuantity={ticketQuantity}
+                          setTicketQuantity={setTicketQuantity}
+                        />
                       ))}
                     </div>
                   </div>
