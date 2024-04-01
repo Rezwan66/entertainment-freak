@@ -1,14 +1,18 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const TicketsInModal = ({ t, ticketQuantity, setTicketQuantity }) => {
+const TicketsInModal = ({
+  // t, ticketQuantity, setTicketQuantity
+  tickets,
+}) => {
   //   console.log(t);
   //   const [inputValue, setInputValue] = useState(1);
   //   console.log(t, ticketQuantity);
   //   console.log(inputValue);
+  console.log(tickets);
   return (
     <div>
       <p className="text-white">
-        {t.ticketType + ' ' + t.quantity + ' $' + t.price}
+        {/* {t.ticketType + ' ' + t.quantity + ' $' + t.price} */}
       </p>
       <div className="flex items-center border-gray-100">
         <button
@@ -24,12 +28,12 @@ const TicketsInModal = ({ t, ticketQuantity, setTicketQuantity }) => {
           type="text"
           //   value={t.quantity}
           defaultValue={1}
-          onChange={e =>
-            setTicketQuantity(prevState => ({
-              ...prevState,
-              [t.ticketType]: e.target.value,
-            }))
-          }
+          // onChange={e =>
+          //   setTicketQuantity(prevState => ({
+          //     ...prevState,
+          //     [t.ticketType]: e.target.value,
+          //   }))
+          // }
           min="1"
         />
         {/* <h3>{count}</h3> */}

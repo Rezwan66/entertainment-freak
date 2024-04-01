@@ -2,6 +2,9 @@ import { Tooltip } from '@mui/material';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import TicketsModal from './TicketsModal';
+// import { useQuery } from '@tanstack/react-query';
+// import useAxiosSecure from '../hooks/useAxiosSecure';
+// import SpinnerSmall from './SpinnerSmall';
 AOS.init();
 
 const EventsCard = ({ event }) => {
@@ -15,6 +18,7 @@ const EventsCard = ({ event }) => {
     description,
     ticketPrice,
   } = event || {};
+
   return (
     <div data-aos="zoom-in">
       <div className="card glass max-h-[544px] group">

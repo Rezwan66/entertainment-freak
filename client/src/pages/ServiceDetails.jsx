@@ -4,24 +4,34 @@ import { DynamicBanner } from '../components/DynamicBanner';
 import { useEffect, useState } from 'react';
 import EventsCard from '../components/EventsCard';
 import useAxiosSecure from '../hooks/useAxiosSecure';
+import { useQuery } from '@tanstack/react-query';
+import SpinnerSmall from '../components/SpinnerSmall';
 
 const ServiceDetails = () => {
-  const [events, setEvents] = useState([]);
+  // const [events, setEvents] = useState([]);
   const axiosSecure = useAxiosSecure();
   const category = useLoaderData();
   const { id } = useParams();
-  useEffect(() => {
-    axiosSecure(`/events?categoryId=${id}`).then(res => setEvents(res.data));
-  }, [axiosSecure, id]);
-  // const idInt = parseInt(id);
-  // console.log(idInt, events);
+  // useEffect(() => {
+  //   axiosSecure(`/events?categoryId=${id}`).then(res => setEvents(res.data));
+  // }, [axiosSecure, id]);
 
-  // IMPLEMENT AND LOAD EVENTS UNDER THIS CATEGORY HERE
-  // console.log(typeof id, idInt, category);
-  // const selected = services.find(service => service.id === idInt);
-  // console.log(selected);
-  // console.log(events);
-  // const { image, long_description, name, price } = category || {};
+  const {
+    data: events = {},
+    // refetch,
+    isPending,
+    isFetching,
+    isLoading,
+  } = useQuery({
+    queryKey: ['events'],
+    queryFn: async () => {
+      const res = await axiosSecure(`/events?categoryId=${id}`);
+      return res.data;
+    },
+  });
+
+  if (isPending || isFetching || isLoading) return <SpinnerSmall />;
+
   return (
     <div>
       <DynamicBanner category={category} />

@@ -9,7 +9,7 @@ import TicketsInModal from './TicketsInModal';
 
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
-  const [ticketQuantity, setTicketQuantity] = useState([]);
+  // const [ticketQuantity, setTicketQuantity] = useState([]);
   // const [quantity, setQuantity] = useState(1);
   const axiosSecure = useAxiosSecure();
   // const { count } = useSelector(state => state.tickets);
@@ -19,24 +19,25 @@ export default function TicketsModal({ event }) {
     event || {};
 
   const {
-    data: tickets = {},
+    data: tickets = [],
     // refetch,
     isPending,
     isFetching,
     isLoading,
   } = useQuery({
-    queryKey: ['tickets'],
+    queryKey: ['tickets', _id],
     queryFn: async () => {
       const res = await axiosSecure(`/tickets/${_id}`);
       return res.data;
     },
+    enabled: !!_id,
   });
 
   if (isPending || isFetching || isLoading) return <SpinnerSmall />;
 
   // console.log(tickets);
 
-  const { eventId, tickets: ticketArray } = tickets || {};
+  // const { eventId, tickets: ticketArray } = tickets || {};
   // console.log(ticketArray, ticketQuantity);
 
   function closeModal() {
@@ -108,16 +109,17 @@ export default function TicketsModal({ event }) {
                       Starts from: ${ticketPrice}
                     </p>
                     <p className="text-sm text-white">{categoryId}</p>
-                    <p className="text-sm text-white">{eventId}</p>
+                    {/* <p className="text-sm text-white">{eventId}</p> */}
                     <div className="text-sm  flex flex-col gap-4">
-                      {ticketArray?.map(t => (
-                        <TicketsInModal
-                          key={t.ticketType}
-                          t={t}
-                          ticketQuantity={ticketQuantity}
-                          setTicketQuantity={setTicketQuantity}
-                        />
-                      ))}
+                      {/* {tickets?.map(t => ( */}
+                      <TicketsInModal
+                        tickets={tickets}
+                        // key={t._id}
+                        // t={t}
+                        // ticketQuantity={ticketQuantity}
+                        // setTicketQuantity={setTicketQuantity}
+                      />
+                      {/* ))} */}
                     </div>
                   </div>
 
