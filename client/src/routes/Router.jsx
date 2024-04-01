@@ -28,9 +28,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://entertainment-freak-server.vercel.app/categories/${params.id}`
-          ),
+          fetch(`${import.meta.env.VITE_API_URL}/categories/${params.id}`),
       },
       {
         path: '/upcoming',

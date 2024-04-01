@@ -95,7 +95,7 @@ async function run() {
         app.get('/tickets/:eventId', async (req, res) => {
             const eventId = req.params.eventId;
             const query = { eventId };
-            const result = await ticketsCollection.findOne(query);
+            const result = await ticketsCollection.find(query).toArray();
             res.send(result);
         });
     } finally {
