@@ -17,6 +17,7 @@ const TicketsInModal = ({
       {tickets?.map(ticket => (
         <div key={ticket._id}>
           <p className="text-white">{ticket.category}</p>
+          <p className="text-white">{ticket.price}</p>
           <div className="flex items-center border-gray-100">
             <button
               //   onClick={() => setInputValue(inputValue - 1)}
