@@ -17,7 +17,12 @@ const TicketsInModal = ({
       {tickets?.map(ticket => (
         <div key={ticket._id}>
           <p className="text-white">
-            {ticket.category + ' ' + '$' + ticket.price + ' ' + ticket.quantity}
+            {ticket.category +
+              ', Price: ' +
+              '$' +
+              ticket.price +
+              ', Quantity: ' +
+              ticket.quantity}
           </p>
           <div className="flex items-center border-gray-100">
             <button
