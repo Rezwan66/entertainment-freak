@@ -1,19 +1,9 @@
 // import { useState } from 'react';
 
-const TicketsInModal = ({
-  // t, ticketQuantity, setTicketQuantity
-  tickets,
-}) => {
-  //   console.log(t);
-  //   const [inputValue, setInputValue] = useState(1);
-  //   console.log(t, ticketQuantity);
-  //   console.log(inputValue);
-  console.log(tickets);
+const TicketsInModal = ({ tickets }) => {
+  // console.log(tickets);
   return (
     <div>
-      {/* <p className="text-white">
-        {t.ticketType + ' ' + t.quantity + ' $' + t.price}
-      </p> */}
       {tickets?.map(ticket => (
         <div key={ticket._id}>
           <p className="text-white">
@@ -38,12 +28,6 @@ const TicketsInModal = ({
               type="text"
               //   value={t.quantity}
               defaultValue={1}
-              // onChange={e =>
-              //   setTicketQuantity(prevState => ({
-              //     ...prevState,
-              //     [t.ticketType]: e.target.value,
-              //   }))
-              // }
               min="1"
             />
             {/* <h3>{count}</h3> */}
