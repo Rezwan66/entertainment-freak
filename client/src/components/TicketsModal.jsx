@@ -10,7 +10,13 @@ import TicketsInModal from './TicketsInModal';
 export default function TicketsModal({ event }) {
   let [isOpen, setIsOpen] = useState(false);
   // const [ticketQuantity, setTicketQuantity] = useState([]);
-  // const [quantity, setQuantity] = useState(1);
+  const [ticketsSelected, setTicketsSelected] = useState([
+    { _id: '', category: 'General Admission', quantity: 1 },
+    { _id: '', category: 'Category 3', quantity: 3 },
+    { _id: '', category: 'Category 2', quantity: 1 },
+    { _id: '', category: 'Category 1', quantity: 1 },
+    { _id: '', category: 'VIP', quantity: 1 },
+  ]);
   const axiosSecure = useAxiosSecure();
   // const { count } = useSelector(state => state.tickets);
   // const dispatch = useDispatch();
@@ -114,6 +120,8 @@ export default function TicketsModal({ event }) {
                       {/* {tickets?.map(t => ( */}
                       <TicketsInModal
                         tickets={tickets}
+                        ticketsSelected={ticketsSelected}
+                        setTicketsSelected={setTicketsSelected}
                         // key={t._id}
                         // t={t}
                         // ticketQuantity={ticketQuantity}
